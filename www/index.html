@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.avgrund.js-master/style/avgrund.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="icon" href="img/weater-flat.png">
+
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/lokijs.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <title>Weather</title>
+
+</head>
+<body>
+
+  <h1>Previsão do tempo</h1>
+
+  <div id="cidade" class="text-center">
+    <input type="text" class="form-control" placeholder="Cidade,País (Ex.:Concórdia,BR)" id="input-cidade">
+    <button type="submit" class="btn btn-default" id="button-preveja">Preveja</button>
+    <button type="submit" class="btn btn-default" id="button-favoritar">Favoritar</button>
+  </div>
+
+  <br>
+
+  <div id="wrapper">
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav" id="lista-cidades">
+              <li class="sidebar-brand">
+                  <a href="#">
+                      Start Bootstrap
+                  </a>
+              </li>
+          </ul>
+      </div>
+
+      <div class="text-center">
+        <button type="button" class="btn btn-default" id="menu-toggle">Mostar Favoritos</button>
+      </div>
+  </div>
+
+  <br>
+
+  <div id="cidade" class="text-center">
+    <button type="button" class="btn btn-default" id="hoje-navbar">Hoje</button>
+    <button type="button" class="btn btn-default" id="proximos-cinco-dias-navbar">Próximos 5 dias</button>
+  </div>
+
+  <br>
+
+  <div class="jumbotron" id="jumbotron">
+    <div id="previsao-hoje">
+      <h1 id="hoje-jumbotron-cidade"></h1>
+      <br>
+      <div class="talbe-responsive">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Temperatura máxima:</td>
+              <td id="temp-max"></td>
+            </tr>
+            <tr>
+              <td>Temperatura mínima:</td>
+              <td id="temp-min"></td>
+            </tr>
+            <tr>
+              <td>Umidade:</td>
+              <td id="umidade"></td>
+            </tr>
+            <tr>
+              <td>Condições do tempo:</td>
+              <td id="condicao-tempo"><img src="" id="condicao-tempo-img"/></td>
+            </tr>
+            <tr>
+              <td>Velocidade do vento:</td>
+              <td id="velocidade-vento"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+  <div id="container-proximos-cinco-dias">
+    <h1 id="proximos-cinco-dias-cidade"></h1>
+    <br>
+    <div class="table=responsive">
+      <table class="table table-striped" id="table-proximos-cinco-dias">
+        <thead>
+          <tr>
+            <td><strong>Data</strong></td>
+            <td><strong>Temperatura média</strong></td>
+            <td><strong>Umidade</strong></td>
+            <td><strong>Condições do tempo</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="data-1"></td>
+            <td id="temp-med-1"></td>
+            <td id="umidade-1"></td>
+            <td id="condicoes-temp-1"><img src="" id="condicao-temp-1-img"/></td>
+          </tr>
+          <tr>
+            <td id="data-2"></td>
+            <td id="temp-med-2"></td>
+            <td id="umidade-2"></td>
+            <td id="condicoes-temp-2"><img src="" id="condicao-temp-2-img"/></td>
+          </tr>
+          <tr>
+            <td id="data-3"></td>
+            <td id="temp-med-3"></td>
+            <td id="umidade-3"></td>
+            <td id="condicoes-temp-3"><img src="" id="condicao-temp-3-img"/></td>
+          </tr>
+          <tr>
+            <td id="data-4"></td>
+            <td id="temp-med-4"></td>
+            <td id="umidade-4"></td>
+            <td id="condicoes-temp-4"><img src="" id="condicao-temp-4-img"/></td>
+          </tr>
+          <tr>
+            <td id="data-5"></td>
+            <td id="temp-med-5"></td>
+            <td id="umidade-5"></td>
+            <td id="condicoes-temp-5"><img src="" id="condicao-temp-5-img"/></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

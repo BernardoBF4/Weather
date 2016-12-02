@@ -1,0 +1,37 @@
+img {
+  height: 50px;
+  width: 50px;
+}
+
+#input-cidade {
+  width: 50px;
+  display: inline-block;
+}
+
+#div-input-cidade {
+  display: inline-block;
+  float: right;
+}
+
+#hoje-navbar {
+  display: inline-block;
+  float: left;
+}
+
+#cidade {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#proximos-cinco-dias-navbar {
+  display: inline-block;
+  float: right;
+}
+
+#p-err {
+  color: #990000;
+}
+
+.modal-backdrop {
+    opacity: 0.8 !important;
+}
